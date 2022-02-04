@@ -35,18 +35,9 @@ const randomise = () => {
     ));
 
     // step 3: display the groups in html
-    
-    
-    // how to show data
-    /**
-     * [
-     *      {
-     *          name: "P1",
-     *          cognTests: [...],
-     *          movTests: [...]
-     *      },
-     * ]
-     */
+    const group1Html = `<div class="group-wrapper"><h2>Group 1</h2><ul>${group1.map(x => `<li><strong>${x.name}</strong>: <strong>cognTests</strong> [${x.cognTests.join(", ")}] / <strong>movTests</strong> [${x.movTests.join(", ")}]</li>`).join("")}</ul></div>`;
+    const group2Html = `<div class="group-wrapper"><h2>Group 2</h2><ul>${group2.map(x => `<li><strong>${x.name}</strong>: <strong>cognTests</strong> [${x.cognTests.join(", ")}] / <strong>movTests</strong> [${x.movTests.join(", ")}]</li>`).join("")}</ul></div>`;
+    resultWrapper.innerHTML = `${group1Html}${group2Html}`;
 };
 
 randomiseButton.addEventListener("click", randomise);
