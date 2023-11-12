@@ -1,6 +1,6 @@
 # Randomise
 
-A small app requested by my little sister.
+A small app requested by my sister.
 
 ## Problem statement
 
